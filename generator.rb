@@ -4,7 +4,7 @@ class Generator
   attr_accessor :svg
 
   def generate_stats_svg(stats, rsn)
-    @svg = Victor::SVG.new width: 256+64, height: 128, style: {background: '#ddd', margin: 'auto'}
+    @svg = Victor::SVG.new width: 256+64, height: 128
     
     @svg.build do
       row_length = 8
