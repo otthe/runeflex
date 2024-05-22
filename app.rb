@@ -4,7 +4,7 @@ require './generator.rb'
 require_relative 'rate_limiter'
 
 class RuneFlex < Sinatra::Base
-  use RateLimiter, limit: 5, period: 60
+  use RateLimiter, limit: 50, period: 60
 
   before do
     logger.info "Received request: #{request.path}"
