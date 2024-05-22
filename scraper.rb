@@ -3,6 +3,9 @@ require 'uri'
 require 'nokogiri'
 
 class Scraper
+
+  attr_accessor :stats
+
   def initialize(rsn)
     @rsn = rsn
 
@@ -62,6 +65,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
 
     hiscores_table = doc.css('table')[0]
+    overall_level = 0
 
     hiscores_table.css('tr').each_with_index do |row, index|
       next if index == 0 #skip header
@@ -71,11 +75,13 @@ class Scraper
       level = cells[3]&.text&.strip
 
       #puts "Skill: #{skill}, Level: #{level}"
-
-      if @stats.key?(skill)
+      if @stats.key?(skill) && skill != :overall
         @stats[skill][:level] = level.to_i
+        overall_level += level.to_i
       end
     end
+
+    @stats[:overall][:level] = overall_level
 
     @stats.each do |skill, data|
       puts "Skill #{skill.capitalize}, Level: #{data[:level]}"
