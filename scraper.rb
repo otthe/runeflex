@@ -74,18 +74,11 @@ class Scraper
       skill = cells[1]&.text&.strip&.downcase&.to_sym
       level = cells[3]&.text&.strip
 
-      #puts "Skill: #{skill}, Level: #{level}"
       if @stats.key?(skill) && skill != :overall
         @stats[skill][:level] = level.to_i
         overall_level += level.to_i
       end
     end
-
     @stats[:overall][:level] = overall_level
-
-    @stats.each do |skill, data|
-      puts "Skill #{skill.capitalize}, Level: #{data[:level]}"
-    end
-
   end
 end
