@@ -1,3 +1,7 @@
+source "https://rubygems.org"
+
+ruby '3.3.0'
+
 gem 'rack-attack', '~> 5.0', '>= 5.0.1'
 gem 'sinatra', '~> 1.4', '>= 1.4.7'
 gem 'victor', '~> 0.3.4'
@@ -8,7 +12,5 @@ gem 'nokogiri', '~> 1.15', '>= 1.15.4'
 gem 'redis', '~> 5.2'
 gem 'rack'
 
-group :test do
-  gem 'rspec'
-  gem 'rack-test'
-end
+gem 'rspec'
+gem 'rack-test'

@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     connection_pool (2.4.1)
     diff-lcs (1.5.1)
@@ -8,8 +9,8 @@ GEM
       racc (~> 1.4)
     racc (1.8.0)
     rack (1.6.13)
-    rack-attack (5.0.1)
-      rack
+    rack-attack (5.4.2)
+      rack (>= 1.0, < 3)
     rack-protection (1.5.5)
       rack
     rack-test (2.1.0)
@@ -52,6 +53,9 @@ DEPENDENCIES
   rspec
   sinatra (~> 1.4, >= 1.4.7)
   victor (~> 0.3.4)
+
+RUBY VERSION
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.5.10
