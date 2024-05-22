@@ -38,7 +38,11 @@ class RuneFlex < Sinatra::Base
   #run! if app_file == $0
 end
 
+# if __FILE__ == $0
+#   require 'puma'
+#   RuneFlex.run!
+# end
+
 if __FILE__ == $0
-  require 'puma'
-  RuneFlex.run!
+  RuneFlex.run!({ server: 'puma', port: ENV['PORT'] || 4567 })
 end
