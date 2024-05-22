@@ -1,4 +1,4 @@
-require 'sinatra/base'
+require 'sinatra'
 require './scraper.rb'
 require './generator.rb'
 require_relative 'rate_limiter'
