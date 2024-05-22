@@ -35,5 +35,10 @@ class RuneFlex < Sinatra::Base
     generator.generate_stats_svg(stats, rsn)
   end
 
-  run! if app_file == $0
+  #run! if app_file == $0
+end
+
+if __FILE__ == $0
+  require 'puma'
+  RuneFlex.run!
 end

@@ -14,3 +14,6 @@ gem 'rack'
 
 gem 'rspec'
 gem 'rack-test'
+
+gem 'webrick'
+gem 'puma'
