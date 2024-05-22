@@ -7,3 +7,8 @@ gem 'nokogiri', '~> 1.15', '>= 1.15.4'
 
 gem 'redis', '~> 5.2'
 gem 'rack'
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+end

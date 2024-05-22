@@ -3,7 +3,7 @@ require 'redis'
 class RateLimiter
   def initialize(app, options = {})
     @app = app
-    @limit = options[:limit] ||  100
+    @limit = options[:limit] ||  5
     @period = options[:period] || 60
     @redis = Redis.new
   end

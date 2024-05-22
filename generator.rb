@@ -26,7 +26,7 @@ class Generator
           text stat[:level], x: xo + image_size + text_offset, y: yo + image_size / 2, dy: "0.35em", fill: 'black', 'font-size': '16px'
         end
       end
-      text "#{rsn} #{stats[:overall][:level]}", x: 4, y: 112, dy: "0.35em", fill: 'black', 'font-size': '16px'
+      text "[RSN: #{rsn}] [Total: #{stats[:overall][:level]}]", x: 4, y: 112, dy: "0.35em", fill: 'black', 'font-size': '16px'
     end
     #svg.save 'template'
     svg.render
