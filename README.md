@@ -1,4 +1,4 @@
-# Runeflex
+# Runeflex [ARCHIVED]
 Includes your up-to-date OSRS stats into your markdown CV, or anything that supports ```<svg>```.
 
 ## Instructions
